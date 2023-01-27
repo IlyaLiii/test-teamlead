@@ -1,0 +1,303 @@
+* {
+  margin: 1em;
+}
+body {
+  background-color: grey;
+}
+
+.promo-name {
+  text-align: center;
+  font-size: large;
+}
+
+.promo-content {
+  display: flex;
+  /* justify-content: center; */
+  flex-flow: row;
+  position: relative;
+}
+
+.promo-content-first {
+  flex: 1;
+}
+.promo-content-second {
+  flex: 3;
+}
+
+.buy {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.buy:hover {
+  background: #ddd;
+  color: black;
+}
+
+#background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.composition {
+  display: flex;
+  justify-content: space-evenly;
+  background: linear-gradient(blue, pink);
+  /* text-align: center; */
+}
+
+.main-composition {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.left-ingredients,
+.right-ingredients {
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.product {
+  padding-top: 50%;
+  height: 400px;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.circle-img {
+  width: 150px; /* задаете свои размеры */
+  height: 150px;
+  border-radius: 50%;
+  /* не забываем о кроссбраузерности */
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -khtml-border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.left-content-top,
+.left-content-midlle,
+.left-content-bottom,
+.right-content-top,
+.right-content-midlle,
+.right-content-bottom {
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  width: 350px;
+}
+
+.text-emoji {
+  text-align: center;
+  white-space: pre-line;
+}
+
+.buy2 {
+  margin: 0 auto;
+  margin-bottom: auto;
+  margin-top: 5%;
+  display: block;
+  width: 200px;
+  font-size: 18px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.buy2:hover {
+  background: #ddd;
+  color: black;
+}
+
+.reviews {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgb(78, 78, 248), #e661da);
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  max-width: 900px;
+  height: auto;
+}
+
+.slider-items {
+  width: 500%;
+  height: 100%;
+  display: flex;
+}
+
+.slider-items .item {
+  width: 20%;
+  transition: 0.7s;
+}
+
+.slider-items .item img {
+  max-width: 100%;
+  /* height: 100%; */
+}
+
+.slider-items input {
+  position: absolute;
+  visibility: hidden;
+}
+
+.slider-nav {
+  position: absolute;
+  bottom: 150px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.slider-nav .slider-nav-item {
+  width: 60px;
+  height: 15px;
+  margin: 7px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.slider-nav .slider-nav-item:hover {
+  background-color: #fff;
+}
+
+#s1:checked ~ .s1 {
+  margin-left: 0;
+}
+
+#s2:checked ~ .s1 {
+  margin-left: -20%;
+}
+
+#s3:checked ~ .s1 {
+  margin-left: -40%;
+}
+
+.name-reviewer {
+  text-align: center;
+  font-size: large;
+}
+
+.description-review {
+  text-align: start;
+  font-size: larger;
+}
+
+.promo {
+  background: linear-gradient(#e661da, rgb(89, 104, 243));
+}
+
+.main-promo {
+  display: flex;
+}
+
+.promo-img {
+  margin-left: 5%;
+  height: 50%;
+  width: auto;
+}
+
+.order-form {
+  background: linear-gradient(#9e4295, rgba(34, 113, 119, 0.568));
+  display: block;
+}
+
+.description-promo {
+  margin-left: 5%;
+  text-align: start;
+  font-size: large;
+}
+
+.timer-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.order-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+.old-price {
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: small;
+}
+
+.new-price {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 200%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+
+  75% {
+    font-size: 200%;
+    margin-left: 25%;
+    width: 150%;
+  }
+}
+
+.order-content-form {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-direction: column;
+}
+
+.order-form-input {
+  margin-left: auto;
+}
+
+.inputs-divs {
+  padding-top: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-btn {
+  height: 50px;
+  width: auto;
+}
